@@ -6,7 +6,7 @@ char encodeRot13(char c);
 int indexOf(char c, char* s);
 int stringLength(char* s);
 char* encodeRot13String(char* s);
-
+/*
 int main(int argc, char** argv)
 {
     char c = 'r';
@@ -15,6 +15,7 @@ int main(int argc, char** argv)
     char* encodedString = encodeRot13String("hello");
     printf("encoded string is: %s\n", encodedString);
 }
+*/
 
 char* encodeRot13String(char* s)
 {
@@ -25,6 +26,7 @@ char* encodeRot13String(char* s)
     {
         *(answer + i) = encodeRot13(*(s + i));
     }
+    *(answer + length) = '\0';
     return answer;
     //finishing writing this function such that it returns a new string
     //which is the s encoded in rot13.  You should use old school pointer
